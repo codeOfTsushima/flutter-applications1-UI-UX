@@ -85,8 +85,8 @@ void _getCategories(){
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          width: 50,
-                          height: 115,
+                          width: 65,
+                          height: 65,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle,

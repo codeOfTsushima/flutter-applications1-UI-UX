@@ -64,6 +64,11 @@ flutter:
     - assets/icons/dots.png
     - assets/icons/filter.svg
     - assets/icons/search.svg
+    - assets/icons/cake.png
+    - assets/icons/ramen.png
+    - assets/icons/italian.png
+    - assets/icons/south-indian.png
+    - assets/icons/north-indian.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

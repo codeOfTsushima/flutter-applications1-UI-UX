@@ -4,8 +4,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app_2/models/category_model.dart';
+import 'package:flutter_app_2/models/diet_model.dart';
 import 'package:flutter_svg/flutter_svg.dart' show SvgPicture;
-
+import 'package:lucide_icons_flutter/lucide_icons.dart';
 class HomePage extends StatefulWidget {
   HomePage({super.key});
 
@@ -15,20 +16,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
  List<CategoryModel> categories = [];
+ List<DietModel> diets = [];
 
-void _getCategories(){
+void _getInitialInfo(){
   categories = CategoryModel.getCategories();
-
+  diets = DietModel.getDiets();
 }
-@override
-  void initstate(){
-
-    _getCategories();
-  }
 
   @override
   Widget build(BuildContext context) {
-    _getCategories();
+    _getInitialInfo();
     return Scaffold(
       appBar: appbar(),
       backgroundColor: Colors.white,
@@ -36,7 +33,15 @@ void _getCategories(){
         children: [
           search(),
           SizedBox(height: 40,),
-          _categoriesSection()
+          _categoriesSection(),
+          SizedBox(height: 40,),
+          Column(
+            children: [
+              Text(
+                'Recomendation \n for Diet'
+              )
+            ],
+          )
         ],
       ),
     
@@ -132,56 +137,52 @@ void _getCategories(){
       backgroundColor: Colors.white,
       centerTitle: true,
       
-      leading: GestureDetector( 
-        onTap: (){
 
-
-        },
-
-      child:Container(
-        
-        decoration: BoxDecoration(
-          color: Color(0xffF7F8F8),
-          borderRadius: BorderRadius.circular(10)
-        ),
-        
-        margin: EdgeInsets.all(10),
-        alignment: Alignment.center,
-      
-        child: Image.asset(
-          'assets/icons/left-arrow.png',
-          height: 20,
-          width: 20,
-          ) ,
-     
-      ),
-     
-     ),
-     
-      actions: [
-        GestureDetector(
-          onTap: (){
-            
-          },
-         child:Container(
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Color(0xffF7F8F8),
-          borderRadius: BorderRadius.circular(10)
-
-        ),
-        alignment: Alignment.center,
-        width: 37,
-
-        child: Image.asset(
-          'assets/icons/dots.png',
-          height: 20,
-          width: 20,
-          ) ,
-      ),
+      leading: Container(
+  margin: const EdgeInsets.all(10),
+  decoration: BoxDecoration(
+    color: const Color(0xffF7F8F8),
+    borderRadius: BorderRadius.circular(10),
+  ),
+  child: IconButton(
+    padding: EdgeInsets.zero, // Removes default padding to fit your small box
+    icon: const Icon(
+      LucideIcons.arrowLeft, // Using the Lucide icon!
+      color: Colors.black,
+      size: 20,
     ),
-  ],
-    
+    onPressed: () {
+      // Add what happens when tapped here
+    },
+  ),
+),
+     
+      
+     //The filter icon starts here
+      actions: [
+  Container(
+    margin: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: const Color(0xffF7F8F8),
+      borderRadius: BorderRadius.circular(10),
+    ),
+    width: 37,
+    child: IconButton(
+      padding: EdgeInsets.zero,
+      icon: const Icon(
+        LucideIcons.moreHorizontal, // The Lucide equivalent of your dots.png
+        color: Colors.black,
+        size: 20,
+      ),
+      onPressed: () {
+        // Add what happens when tapped here
+      },
+    ),
+  ),
+],
+
+
+  //ends here  
 );
   }
 

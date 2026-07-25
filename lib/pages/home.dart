@@ -3,6 +3,7 @@
 //statefull widgets can change their state during the runtime of their app
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_app_2/models/category_model.dart';
 import 'package:flutter_app_2/models/diet_model.dart';
 import 'package:flutter_svg/flutter_svg.dart' show SvgPicture;
@@ -36,9 +37,67 @@ void _getInitialInfo(){
           _categoriesSection(),
           SizedBox(height: 40,),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'Recomendation \n for Diet'
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Recomendation \n for Diet',
+                  style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+                ),
+              ),
+              SizedBox(height: 15,),
+              Container(
+                color: Colors.blue,
+                height: 240,
+                child: ListView.separated(
+                  itemBuilder: (context, index) {
+                    return Container(
+                      width: 210,
+                      decoration: BoxDecoration(
+                        color: diets[index].boxColor,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Column(
+                        children: [
+                          Text(
+                            diets[index].name,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black12,
+                              fontSize: 16,
+                            ),
+                            ),
+                            Text(
+                              '${diets[index].level} | ${diets[index].duration} | ${diets[index].calorie}',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                         Image.asset(
+                          diets[index].iconPath,
+                          width: 100,
+                          height: 100,
+                          
+                         )
+                        ],
+                      ),
+                    );
+                  }, 
+                  separatorBuilder: (context, index) => SizedBox(width: 25,),
+                  itemCount: diets.length,
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                ),
               )
             ],
           )

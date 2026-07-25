@@ -70,7 +70,9 @@ flutter:
     - assets/icons/italian.png
     - assets/icons/south-indian.png
     - assets/icons/north-indian.png
-
+    - assets/icons/pessaratu.png
+    - assets/icons/soyaTikka.png
+    - assets/icons/brocolli.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

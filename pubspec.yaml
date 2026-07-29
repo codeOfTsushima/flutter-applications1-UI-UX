@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.3.0
   lucide_icons_flutter: ^3.1.15
+  
 
 dev_dependencies:
   flutter_test:
@@ -61,8 +62,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/icons/left-arrow.png
-    - assets/icons/dots.png
     - assets/icons/filter.svg
     - assets/icons/search.svg
     - assets/icons/cake.png
@@ -70,9 +69,13 @@ flutter:
     - assets/icons/italian.png
     - assets/icons/south-indian.png
     - assets/icons/north-indian.png
-    - assets/icons/pessaratu.png
-    - assets/icons/soyaTikka.png
-    - assets/icons/brocolli.png
+    - assets/icons/pessaratu.svg
+    - assets/icons/soyaTikka.svg
+    - assets/icons/brocolli.svg
+    - assets/icons/masalaDosa.svg
+    - assets/icons/pavBhaji.svg
+    - assets/icons/lasagna.svg
+    - assets/icons/noodles.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

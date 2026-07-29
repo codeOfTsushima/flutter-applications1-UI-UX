@@ -24,36 +24,36 @@ class DietModel {
 
     diets.add(
       DietModel(
-       name: 'Green Gram Dosa(Pesarattu)',
-       iconPath: 'assets/icons/pessaratu',
+       name: 'Green Gram Dosa',
+       iconPath: 'assets/icons/pessaratu.svg',
        level: 'Easy',
        duration: '30mins',
        calorie: '230kCal',
        viewIsSelected: true,
-       boxColor: Colors.white,
+       boxColor: Colors.orange
       )
     );
 
     diets.add(
       DietModel(
        name: 'Soya Tikka',
-       iconPath: 'assets/icons/soyaTikka.png',
+       iconPath: 'assets/icons/soyaTikka.svg',
        level: 'Easy',
        duration: '20mins',
        calorie: '240kCal',
        viewIsSelected: false,
-       boxColor: Color(0xffEEA4CE)
+       boxColor: Colors.yellow
       )
     );
     diets.add(
       DietModel(
-       name: 'Steamed Tofu & Brocolli in Garlic Sauce',
-       iconPath: 'assets/icons/brocolli.png',
+       name: ' Tofu Brocolli puree',
+       iconPath: 'assets/icons/brocolli.svg',
        level: 'Easy',
        duration: '20mins',
        calorie: '180kCal',
        viewIsSelected: false,
-       boxColor: Color(0xffEEA4CE)
+       boxColor: Colors.orange
       )
     );
 

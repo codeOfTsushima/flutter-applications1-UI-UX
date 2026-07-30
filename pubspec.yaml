@@ -74,7 +74,7 @@ flutter:
     - assets/icons/brocolli.svg
     - assets/icons/masalaDosa.svg
     - assets/icons/pavBhaji.svg
-    - assets/icons/lasagna.svg
+    - assets/icons/pizza.svg
     - assets/icons/noodles.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

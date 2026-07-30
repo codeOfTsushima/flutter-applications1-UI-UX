@@ -68,26 +68,25 @@ void _getInitialInfo(){
 
                 itemBuilder: (context, index){
                   return Container(
-                    color: Colors.blue,
-                    height: 115,
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(popularDiets[index].iconPath),
-                      ],
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(40),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.6),
-                          offset: Offset(0, 10),
-                          blurRadius: 40,
-                          spreadRadius: 0
-                        ),
-                      ]
-                    ),
-                  );
+                height: 115,
+                decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(40),
+                boxShadow: [
+                BoxShadow(
+                color: Colors.black.withValues(alpha: 0.6),
+                 offset: Offset(0, 10),
+                  blurRadius: 40,
+                   spreadRadius: 0
+          ),
+         ]
+        ),
+          child: Row(
+           children: [
+            SvgPicture.asset(popularDiets[index].iconPath),
+                  ],
+                 ),
+                );
                 }
               ) 
             ],

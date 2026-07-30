@@ -42,8 +42,8 @@ class PopularDietsModel {
 
     popularDiets.add(
       PopularDietsModel(
-       name: 'lasagna',
-       iconPath: 'assets/icons/lasagna.svg',
+       name: 'Margherita Pizza',
+       iconPath: 'assets/icons/pizza.svg',
        level: 'Easy',
        duration: '20mins',
        calorie: '350kCal',

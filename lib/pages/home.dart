@@ -301,7 +301,7 @@ void _getInitialInfo(){
      
       
      //The filter icon starts here
-      actions: [
+      actions:[
   Container(
     margin: const EdgeInsets.all(10),
     decoration: BoxDecoration(

@@ -317,7 +317,7 @@ void _getInitialInfo(){
   AppBar appbar() {
     return AppBar(
     title: Text(
-      'Breakfast',
+      'BreakFest',
       style: TextStyle(
         color:Colors.black,
         fontSize: 18,
